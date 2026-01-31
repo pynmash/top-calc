@@ -22,7 +22,7 @@ body {
 }
 
 #display {
-  font-size: 4em;
+  font-size: 6em;
   text-align: right;
   background-color: var(--light-grey);
 }
@@ -37,12 +37,11 @@ body {
 }
 
 .button {
-  height: 3em;
-  min-width: 3em;
   background: none;
   background-color: var(--light-grey);
   color: inherit;
-  font-size: 2em;
+  padding: 0.25em;
+  font-size: 4em;
   border: solid 1px var(--shadow-grey);
   cursor: pointer;
 }
