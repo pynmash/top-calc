@@ -52,6 +52,23 @@ buttons.addEventListener("click", (e) => {
     }
     return;
   }
+  if (btn.id === "button-delete") {
+    if (currentInput.length > 1) {
+      currentInput = currentInput.slice(0, -1);
+    } else {
+      currentInput = "0";
+    }
+    updateDisplay(currentInput);
+    return;
+  }
+  if (btn.id === "button-reset") {
+    currentInput = "0";
+    previousInput = null;
+    currentOperator = null;
+    shouldResetScreen = false;
+    updateDisplay(currentInput);
+    return;
+  }
   if (
     !btn.classList.contains("operand") &&
     !btn.id.includes("button-equals") &&
