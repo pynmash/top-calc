@@ -28,3 +28,7 @@ function operate(num1, num2, operator) {
   return operator(num1, num2);
 }
 
+function updateDisplay(num) {
+  display.textContent = num;
+}
+
