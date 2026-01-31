@@ -1,3 +1,13 @@
+let currentInput = "0";
+let previousInput = null;
+let currentOperator = null;
+let shouldResetScreen = false;
+
+let calcObject = {};
+
+const display = document.querySelector("#display");
+const buttons = document.querySelector("#buttons");
+
 function add(a, b) {
   return a + b;
 }
@@ -18,6 +28,3 @@ function operate(num1, num2, operator) {
   return operator(num1, num2);
 }
 
-let num1 = 0;
-let num2 = 0;
-let operator = "";
