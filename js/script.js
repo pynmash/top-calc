@@ -41,3 +41,22 @@ const operations = {
 
 updateDisplay(currentInput);
 
+buttons.addEventListener("click", (e) => {
+  const btn = e.target;
+  const action = btn.textContent;
+
+  if (
+    !btn.classList.contains("operand") &&
+    !btn.id.includes("button-equals") &&
+    !btn.id.includes("button-reset")
+  ) {
+    if (currentInput === "0" || shouldResetScreen) {
+      currentInput = action;
+      shouldResetScreen = false;
+    } else {
+      currentInput += action;
+    }
+    updateDisplay(currentInput);
+    return;
+  }
+});
