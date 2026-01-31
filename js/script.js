@@ -66,4 +66,20 @@ buttons.addEventListener("click", (e) => {
     updateDisplay(currentInput);
     return;
   }
+  if (btn.classList.contains("operand") && action !== "." && action !== "⌫") {
+    previousInput = parseFloat(currentInput);
+    currentOperator = operations[action];
+    shouldResetScreen = true;
+    return;
+  }
+  if (btn.id === "button-equals") {
+    if (currentOperator && previousInput !== null) {
+      const secondInput = parseFloat(currentInput);
+      const result = operate(previousInput, secondInput, currentOperator);
+      updateDisplay(result);
+      currentInput = result.toString();
+      previousInput = null;
+      currentOperator = null;
+    }
+  }
 });
