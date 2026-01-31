@@ -32,3 +32,9 @@ function updateDisplay(num) {
   display.textContent = num;
 }
 
+const operations = {
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "/": divide,
+};
