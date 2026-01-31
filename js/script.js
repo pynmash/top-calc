@@ -45,6 +45,13 @@ buttons.addEventListener("click", (e) => {
   const btn = e.target;
   const action = btn.textContent;
 
+  if (btn.id === "button-decimal") {
+    if (!currentInput.includes(".")) {
+      currentInput += ".";
+      updateDisplay(currentInput);
+    }
+    return;
+  }
   if (
     !btn.classList.contains("operand") &&
     !btn.id.includes("button-equals") &&
