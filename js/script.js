@@ -38,3 +38,6 @@ const operations = {
   "*": multiply,
   "/": divide,
 };
+
+updateDisplay(currentInput);
+
